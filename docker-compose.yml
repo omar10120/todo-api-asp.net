@@ -1,0 +1,30 @@
+services:
+  ayagroup_sms.api:
+    image: ${DOCKER_REGISTRY-}ayagroupsmsapi
+    container_name : ayagroup_SMS.API
+    build:
+      context: .
+      dockerfile: ayagroup_SMS.API\Dockerfile
+    ports: 
+       - "8080:8080"
+       - "8081:8081"
+    volumes:
+       - sql_data:/var/opt/mssql
+
+
+  api:
+    build:
+      context: .
+      dockerfile: API/Dockerfile
+    ports:
+      - "5000:80"
+      - "5001:443"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Data Source=SQL1004.site4now.net;Initial Catalog=db_abb94d_todo;User Id=db_abb94d_todo_admin;Password=Aa@123456
+      
+    depends_on:
+      - db
+
+volumes:
+  sql_data:

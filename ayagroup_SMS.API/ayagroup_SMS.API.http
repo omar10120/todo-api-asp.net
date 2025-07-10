@@ -1,0 +1,6 @@
+@ayagroup_SMS.API_HostAddress = http://localhost:5124
+
+GET {{ayagroup_SMS.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

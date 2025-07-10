@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35303.130
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ayagroup_SMS.API", "ayagroup_SMS.API\ayagroup_SMS.API.csproj", "{D66C2187-C623-4E93-8416-31398B141CC1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ayagroup_SMS.Application", "ayagroup_SMS.Application\ayagroup_SMS.Application.csproj", "{5A212CC4-D11D-4F7E-AF22-7DA1EA2CF5D5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ayagroup_SMS.Core", "ayagroup_SMS.Core\ayagroup_SMS.Core.csproj", "{88166886-03BB-4D71-A699-43F978F83AF8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ayagroup_SMS.Infrastructure", "ayagroup_SMS.Infrastructure\ayagroup_SMS.Infrastructure.csproj", "{F65A80B6-EE33-4B67-8A8F-1860F5DACE4F}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{F382ACBE-29D9-4177-81E8-2E5882133D3C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D66C2187-C623-4E93-8416-31398B141CC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D66C2187-C623-4E93-8416-31398B141CC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D66C2187-C623-4E93-8416-31398B141CC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D66C2187-C623-4E93-8416-31398B141CC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A212CC4-D11D-4F7E-AF22-7DA1EA2CF5D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A212CC4-D11D-4F7E-AF22-7DA1EA2CF5D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A212CC4-D11D-4F7E-AF22-7DA1EA2CF5D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A212CC4-D11D-4F7E-AF22-7DA1EA2CF5D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88166886-03BB-4D71-A699-43F978F83AF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88166886-03BB-4D71-A699-43F978F83AF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88166886-03BB-4D71-A699-43F978F83AF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88166886-03BB-4D71-A699-43F978F83AF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F65A80B6-EE33-4B67-8A8F-1860F5DACE4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F65A80B6-EE33-4B67-8A8F-1860F5DACE4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F65A80B6-EE33-4B67-8A8F-1860F5DACE4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F65A80B6-EE33-4B67-8A8F-1860F5DACE4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F382ACBE-29D9-4177-81E8-2E5882133D3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F382ACBE-29D9-4177-81E8-2E5882133D3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F382ACBE-29D9-4177-81E8-2E5882133D3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F382ACBE-29D9-4177-81E8-2E5882133D3C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {35EBAA71-539F-43E8-A923-BA44254784A2}
+	EndGlobalSection
+EndGlobal
