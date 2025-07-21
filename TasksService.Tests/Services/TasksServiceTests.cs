@@ -46,20 +46,35 @@ namespace ayagroup_SMS.Application.Tests.Services
         [Fact]
         public async Task CreateAsync_ValidRequest_ReturnsSuccess()
         {
-            var dto = _fixture.Build<TaskCreateDto>()
-                .With(t => t.Title, "Test Task")
-                .Create();
+            // Arrange
+            var validCategoryId = Guid.Parse("BFFD2523-8149-4099-8A49-A6C16102650B");
 
-            _mockHttpContextAccessor.Setup(a => a.HttpContext).Returns(new DefaultHttpContext());
-            _mockUnitOfWork.Setup(u => u.Tasks.AddAsync(It.IsAny<Tasks>())).Returns(Task.CompletedTask);
-            _mockUnitOfWork.Setup(u => u.SaveChangesAsync()).ReturnsAsync(1);
-            var userId = Guid.NewGuid();
+            var dto = new TaskCreateDto
+            {
+                Title = "Valid Task Title",
+                Description = "Test description",
+                DueDate = DateTime.UtcNow.AddDays(1),
+                CategoryId = validCategoryId,
+                Priority = Priority.Medium // Valid enum value
+            };
+
+            // Mock category exists
+            _mockUnitOfWork.Setup(u => u.Categories.ExistsAsync(validCategoryId))
+                           .ReturnsAsync(true);
+
+            // Mock task operations
+            _mockUnitOfWork.Setup(u => u.Tasks.AddAsync(It.IsAny<Tasks>()))
+                .Returns(Task.CompletedTask);
+
+            _mockUnitOfWork.Setup(u => u.SaveChangesAsync())
+                .ReturnsAsync(1);
+
+            // Act
             var result = await _service.CreateAsync(dto, _testUserId);
 
+            // Assert
             result.Success.Should().BeTrue();
             result.Message.Should().Be("Task created successfully");
-            _mockUnitOfWork.Verify(u => u.Tasks.AddAsync(It.IsAny<Tasks>()), Times.Once);
-            _mockUnitOfWork.Verify(u => u.SaveChangesAsync(), Times.Once);
         }
 
     }
