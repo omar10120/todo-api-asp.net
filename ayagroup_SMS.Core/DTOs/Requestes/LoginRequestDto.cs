@@ -13,8 +13,8 @@ namespace ayagroup_SMS.Core.DTOs.Requestes
         [MaxLength(256, ErrorMessage = "Username name cannot exceed 256 characters.")]
         public string Username { get; set; }
 
-     
 
+        
         public string Password { get; set; }
     }
 }

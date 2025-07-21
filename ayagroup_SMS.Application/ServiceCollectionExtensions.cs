@@ -6,6 +6,7 @@ using ayagroup_SMS.Core.Interfaces.Infrastructure;
 using ayagroup_SMS.Application.Entity.Services;
 using ayagroup_SMS.Core.Interfaces.Application.EntityServices;
 using ayagroup_SMS.Application.EntityServices;
+using System;
 namespace ayagroup_SMS.Application
 {
     public static class ServiceCollectionExtensions
@@ -16,8 +17,10 @@ namespace ayagroup_SMS.Application
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IJwtService, JwtService>();
             services.AddScoped<ITasksService, TasksService>();
-            
-            
+            services.AddScoped<ICategoryService, CategoryService>();
+          
+
+
             services.AddHttpContextAccessor();
 
             return services;
